@@ -2,8 +2,8 @@
 2019年10月18日19:04:43
 第二次看单体地狱，再次熟悉ssm的开发过程和注意事项。以便于我的质量管理系统的开发。
 ## 2.Spring MVC 项目的创建过程
-1.桌面上新建文件夹 m-shop
-2.用Idea打开项目文件夹，并新建`README.md`说明项目相关信息，新建`pom.xml`并复制基本内容，再托管到maven。
+#### 1.桌面上新建文件夹 m-shop
+#### 2.用Idea打开项目文件夹，并新建`README.md`说明项目相关信息，新建`pom.xml`并复制基本内容，再托管到maven。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -44,7 +44,7 @@
 </project>
 ```
 
-3.完善项目基本结构。新建`src/main/java(resources、webapp/WEB-INF/web.xml)`,并复制web.xml基本内容。新建test/java。并mark Directory as相应文件夹类型。
+#### 3.完善项目基本结构。新建`src/main/java(resources、webapp/WEB-INF/web.xml)`,并复制web.xml基本内容。新建test/java。并mark Directory as相应文件夹类型。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -56,10 +56,10 @@
 </web-app>
 ```
 
-4.完善架构结构。在webapp下新建`assets`文件夹，java下新建`com.funtl.my.shop`。域名反转。因为3层架构MVC，所以需要新建
+#### 4.完善架构结构。在webapp下新建`assets`文件夹，java下新建`com.funtl.my.shop`。域名反转。因为3层架构MVC，所以需要新建
 dao--数据访问层，service--业务逻辑层,web--视图层。
 
-5.配置Spring和Log4j。spring的总配置，一般起名为`spring-context.xml`，从此类的实例化工作交给Spring容器管理（Ioc）。新建`log4j.properties`
+#### 5.配置Spring和Log4j。spring的总配置，一般起名为`spring-context.xml`，从此类的实例化工作交给Spring容器管理（Ioc）。新建`log4j.properties`
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,17 +86,20 @@ log4j.appender.A3.MaxBackupIndex=10
 log4j.appender.file.layout.ConversionPattern=%d %p [%c] - %m%n
 ```
 
-6.新建`plugins/bootstrap`复制bootstrap和jquery.
-7.在webapp下新建`index.html`
-8.配置tomcat,启动检查是否有问题。
+#### 6.新建`plugins/bootstrap`复制bootstrap和jquery.
+
+#### 7.在webapp下新建`index.html`
+
+#### 8.配置tomcat,启动检查是否有问题。
 
 ## 重点
 ### 如何应用admin-lte模板
-1.首先甄别模板中内容。
+#### 1.首先甄别模板中内容。
     `bower_components`中是模板用到的各种插件，需要。
     `build`中包含less等css构建的技术，不需要。
     `dist`是模板的源码，需要。
     `plugins`里面是核心组件的扩展插件,需要.
-2.由于现在基于模板开发而不是bootstrap，因此将项目中的bootstrap和jquery删掉，将模板的`bower_components`、`dist`、`plugins`复制到项目中。
+
+#### 2.由于现在基于模板开发而不是bootstrap，因此将项目中的bootstrap和jquery删掉，将模板的`bower_components`、`dist`、`plugins`复制到项目中。
 
 ![](http://ww1.sinaimg.cn/large/007Rnr4nly1g82nvvxol7j307w053mx1.jpg)

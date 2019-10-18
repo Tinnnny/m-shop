@@ -1,9 +1,9 @@
-## 概述
+## 1.概述
 2019年10月18日19:04:43
 第二次看单体地狱，再次熟悉ssm的开发过程和注意事项。以便于我的质量管理系统的开发。
-## Spring MVC 项目的创建过程
+## 2.Spring MVC 项目的创建过程
 1.桌面上新建文件夹 m-shop
-2.用Idea打开项目文件夹，并新建`read.md`说明项目相关信息，新建`pom.xml`并复制基本内容，再托管到maven。
+2.用Idea打开项目文件夹，并新建`README.md`说明项目相关信息，新建`pom.xml`并复制基本内容，再托管到maven。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,5 +86,17 @@ log4j.appender.A3.MaxBackupIndex=10
 log4j.appender.file.layout.ConversionPattern=%d %p [%c] - %m%n
 ```
 
-6.新建`plugins/bootstrap`复制bootstrap和jquery
+6.新建`plugins/bootstrap`复制bootstrap和jquery.
+7.在webapp下新建`index.html`
+8.配置tomcat,启动检查是否有问题。
 
+## 重点
+### 如何应用admin-lte模板
+1.首先甄别模板中内容。
+    `bower_components`中是模板用到的各种插件，需要。
+    `build`中包含less等css构建的技术，不需要。
+    `dist`是模板的源码，需要。
+    `plugins`里面是核心组件的扩展插件,需要.
+2.由于现在基于模板开发而不是bootstrap，因此将项目中的bootstrap和jquery删掉，将模板的`bower_components`、`dist`、`plugins`复制到项目中。
+
+![4@3[Q5OOOCS9{{]]]UW[@0M.png](http://ww1.sinaimg.cn/large/007Rnr4nly1g82nvvxol7j307w053mx1.jpg)

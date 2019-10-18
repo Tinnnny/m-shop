@@ -107,4 +107,5 @@ log4j.appender.file.layout.ConversionPattern=%d %p [%c] - %m%n
 
 #### 2.复制文件
 由于现在基于模板开发而不是bootstrap，因此将项目中的bootstrap和jquery删掉，将模板的`bower_components`、`dist`、`plugins`复制到项目中。
+
 ![](http://ww1.sinaimg.cn/large/007Rnr4nly1g82nvvxol7j307w053mx1.jpg)

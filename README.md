@@ -119,3 +119,7 @@ log4j.appender.file.layout.ConversionPattern=%d %p [%c] - %m%n
   - 更换theme可以更换模板的主题。
   - 不能复制(Google Font)谷歌字体，因为网络原因会造成阻塞，造成页面不能正常显示。
   - 在复制静态资源文件时可能会遇到404的问题。解决方法是添加配置类。
+
+### 注解
+- @data 引入lombok依赖，就可以免去getter和setter。
+
